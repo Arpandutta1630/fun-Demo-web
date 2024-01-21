@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>YOLO-just-choose</title>
+    <style>
+        /* Add or modify styles as needed */
+
+        @keyframes breakHeart {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2) rotate(45deg);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .images-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allow images to wrap to the next line */
+            margin-top: 20px; /* Add margin to separate from buttons */
+        }
+
+        .images-row img {
+            width: 150px; /* Adjust the width of the images */
+            margin: 10px; /* Adjust the margin between images */
+            border-radius: 8px; /* Add border-radius for a rounded look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+            transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+        }
+
+        .images-row img:hover {
+            transform: scale(1.1); /* Increase size on hover */
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="imageRow" class="images-row"></div>
+        <div id="selectedImage" style="display: none;"></div>
+        <div id="selectedImageName" style="display: none;"></div>
+        
+        <button id="voteButton" class="heart-button" hidden onclick="voteForImage()">Vote</button>
+        <div class="heart" id="heart">❤️</div>
+        <p class="changing-color" id="questionText">DO YOU LIKE ME</p>
+        <div class="buttons">
+            <button id="yesButton" onclick="showImages()">YES</button>
+            <button id="noButton" onclick="breakHeart()">NO</button>
+        </div>
+    </div>
+
+    <script src="script.js">
+   
+    
+</script>
+</body>
+</html>
